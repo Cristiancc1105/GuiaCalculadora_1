@@ -396,13 +396,9 @@ public class calGUI extends javax.swing.JFrame {
         cal2.num1=Double.parseDouble(texto.getText());
         cal2.num2=Double.parseDouble(texto.getText());
         String textoActual=texto.getText();
-        if (cal2.num2 == 0) {
-        texto.setText("Error: No se puede dividir por cero.");
-    } else {
-        sig = "/";
+        sig="-";
         texto.setText("");
     }
-    }//GEN-LAST:event_restaActionPerformed
 
     private void divisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisionActionPerformed
       cal2.num1=Double.parseDouble(texto.getText());
