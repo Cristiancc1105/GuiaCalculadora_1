@@ -38,7 +38,7 @@ public class Calculadora {
     }
     
     public void raizEnesima(double a){
-        result=Math.sqrt(a);
+        result=Math.pow(num1,1/num2);
     }
     
     public void potenciaEnesima(){
