@@ -342,39 +342,39 @@ public class calGUI extends javax.swing.JFrame {
 
     private void igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_igualActionPerformed
         cal2.num2=Double.parseDouble(texto.getText());
-        if(sig.equals("+")){
-            cal2.suma();
-            texto.setText(String.valueOf(cal2.result));
-        }else
-            if(sig.equals("-")){
-            cal2.resta();
-            texto.setText(String.valueOf(cal2.result));
-            }else
-                if(sig.equals("*")){
+        switch (sig) {
+            case "+" -> {
+                cal2.suma();
+                texto.setText(String.valueOf(cal2.result));
+            }
+            case "-" -> {
+                cal2.resta();
+                texto.setText(String.valueOf(cal2.result));
+            }
+            case "*" -> {
                 cal2.multiplicacion();
                 texto.setText(String.valueOf(cal2.result));
-                }else
-                    if(sig.equals("/")){
-                        if(cal2.num2==0){
-                            String textoActual=texto.getText();
-                            texto.setText("Error NO se divide por 0");
-                        }else{
-                            cal2.division();
-                            texto.setText(String.valueOf(cal2.result));
-                        }
-                    }else
-                        if(sig.equals("POW")){
-                        cal2.potenciaEnesima();
-                        texto.setText(String.valueOf(cal2.result));
-                        }else
-                            if(sig.equals("IVA")){
-                            cal2.CIVA();
-                            texto.setText(String.valueOf(cal2.total));
-                            } else{
-                             
-                                    
-                                }
-    }//GEN-LAST:event_igualActionPerformed
+            }
+            case "/" -> {
+                if(cal2.num2==0){
+                    String textoActual=texto.getText();
+                    texto.setText("Error NO se divide por 0");
+                }else{
+                    cal2.division();
+                    texto.setText(String.valueOf(cal2.result));
+                }
+            }
+            case "POW" -> {
+                cal2.potenciaEnesima();
+                texto.setText(String.valueOf(cal2.result));
+            }
+            case "IVA" -> {
+                cal2.CIVA();
+                texto.setText(String.valueOf(cal2.total));
+            }
+            default -> {
+            }
+        }
 
     private void multiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicacionActionPerformed
         cal2.num1=Double.parseDouble(texto.getText());
