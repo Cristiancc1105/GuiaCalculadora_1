@@ -368,6 +368,10 @@ public class calGUI extends javax.swing.JFrame {
                 cal2.potenciaEnesima();
                 texto.setText(String.valueOf(cal2.result));
             }
+            case "raiz" -> {
+                cal2.raizEnesima();
+                texto.setText(String.valueOf(cal2.result));
+            }
             case "IVA" -> {
                 cal2.CIVA();
                 texto.setText(String.valueOf(cal2.total));
@@ -409,9 +413,11 @@ public class calGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_divisionActionPerformed
 
     private void raizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raizActionPerformed
-      double r=Double.parseDouble(texto.getText());
-      cal2.raizEnesima(r);
-      texto.setText(String.valueOf(cal2.result));
+       cal2.num1=Double.parseDouble(texto.getText());
+       cal2.num2=Double.parseDouble(texto.getText());
+       String textoActual=texto.getText();
+       sig="raiz";
+       texto.setText("");
     }//GEN-LAST:event_raizActionPerformed
 
     private void potenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potenciaActionPerformed
