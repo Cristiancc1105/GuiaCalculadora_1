@@ -75,7 +75,7 @@ public class Consola {
                 }
                 
             case 8 -> {
-                cal1.raizEnesima(a);
+                cal1.raizEnesima();
                 System.out.println("La raiz del numero es:"+cal1.result);
                 }
                 
